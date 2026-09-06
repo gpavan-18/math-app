@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #2e1065;
+  background: #f5f3ff;
+}
+
+.font-display {
+  font-family: 'Baloo 2', 'Comic Sans MS', system-ui, sans-serif;
+}
+
+/* Playful animated background used on the app shell */
+.app-bg {
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #ede9fe 0%, transparent 60%),
+    radial-gradient(1000px 500px at 110% 10%, #fce7f3 0%, transparent 55%),
+    radial-gradient(900px 700px at 50% 120%, #dbeafe 0%, transparent 55%),
+    #f5f3ff;
+}
+
+/* Kid-friendly scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c4b5fd;
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a78bfa;
+  background-clip: content-box;
+}
+
+/* Remove number input spinners for the answer box */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
